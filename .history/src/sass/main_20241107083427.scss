@@ -1,0 +1,48 @@
+/* main */
+@use "./base/reset";
+@use "./pages/home";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 400px;
+    background: rgb(180, 135, 95);
+}
+
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
+
+.card__content {
+    text-align: center;
+    position: relative;
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em;
+}
+
+/*
+.card__front {
+    
+    background: rgb(89, 29, 29);
+    transform: rotateY(.25turn);
+}
+     */
