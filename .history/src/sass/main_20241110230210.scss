@@ -15,7 +15,7 @@
   --fw-bold: 700;
   --clr: #b7c9e5;  
   --clr-dark: #333; 
-  --font-family: 'Roboto', sans-serif;  
+  --font-family: 'Roboto', sans-serif;  /* Default font */
 }
 
 *,
@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: var(--font-family);  
+  font-family: var(--font-family);  /* Apply the custom font */
   height: 100vh;
   display: grid;
   place-items: center;
@@ -82,7 +82,7 @@ body {
 }
 
 .card__title {
-  font-family: var(--font-family);  
+  font-family: var(--font-family);  /* Apply font to title */
   font-size: 2rem;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
@@ -91,7 +91,7 @@ body {
 }
 
 .card__subtitle {
-  font-family: var(--font-family);  
+  font-family: var(--font-family);  /* Apply font to subtitle */
   font-size: 1.2rem;
   font-weight: var(--fw-normal);
 }
@@ -103,7 +103,7 @@ body {
 }
 
 .card__body {
-  font-family: var(--font-family);  
+  font-family: var(--font-family);  /* Apply font to body */
   font-size: 1rem;
   line-height: 1.5;
   padding: 1em;
