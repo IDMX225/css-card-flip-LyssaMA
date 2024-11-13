@@ -1,0 +1,174 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --level-three: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #f59e42; /* Squash Soup Orange */
+  --clr-dark: #331710; /* Dark brown for the card back */
+  --font-family: 'Roboto', sans-serif;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensures padding and border are included in width/height */
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);  
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+/* Title Above the Card */
+.title-above-card {
+  font-family: var(--font-family);
+  font-size: 3rem; /* Larger size for the title */
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: 1.5em; /* Space between title and ingredients */
+  color: #331710; /* Dark color for the title */
+}
+
+/* Ingredients Section */
+.ingredients {
+  text-align: center;
+  margin-bottom: 2em; /* Space between ingredients and card */
+}
+
+.ingredients-heading {
+  font-family: var(--font-family);
+  font-size: 2.2rem; /* Larger size for "Ingredients you'll need:" */
+  font-weight: var(--fw-bold);
+  color: #331710; /* Dark color */
+  margin-bottom: 5px; /* Adds space between the heading and the ingredient list */
+}
+
+.ingredients-list {
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 1.2rem; /* Regular size for the list items */
+  color: #022915; /* Dark green color */
+  list-style-type: disc; /* Use bullet points for the list */
+  margin-left: 20px; /* Indentation for the list items */
+}
+
+/* Card Container */
+.card {
+  width: 320px;  /* Card width */
+  height: 450px; /* Card height */
+  perspective: 1000px;  
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden;  
+  padding-bottom: 2em; /* Add padding under the card */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Card Content */
+.card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s; 
+}
+
+.card:hover .card__content {
+  transform: rotateY(180deg);  
+}
+
+/* Front and Back of the Card */
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden; 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 12px; /* Ensure the corners of both front and back are rounded */
+  box-sizing: border-box; /* Ensures padding and border are included */
+  width: 100%;  /* Ensure front and back are the same size */
+  height: 100%; /* Ensure front and back are the same size */
+}
+
+/* Front of the Card */
+.card__front {
+  background-color: var(--clr);  
+  color: #034d28; /* Dark green text for contrast */
+  padding: 2em 1.5em;  /* Adjust padding for consistent spacing */
+  border-radius: 12px; /* Match the card's rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow to front for depth */
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Adding the border effect with rounded corners */
+.card__front::before {
+  content: '';
+  position: absolute; /* Position inside the front */
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  border: 3px solid currentColor;
+  border-radius: 8px; /* Rounded corners on the border */
+  pointer-events: none; /* Prevent interaction with the border */
+}
+
+/* Title on Card Front */
+.card__title {
+  font-family: var(--font-family);  
+  font-size: 2.4rem; /* Slightly larger title size */
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: #331710;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow around title */
+  padding: 1em; /* Even padding inside the box for space from the border */
+  text-align: center;
+  position: relative;
+  z-index: 1;  /* Ensure the title is on top of the border */
+  width: 100%;  /* Ensure title box stretches across the card */
+  box-sizing: border-box; /* Include padding in the overall width calculation */
+  display: flex;
+  justify-content: center; /* Ensure title is horizontally centered */
+  align-items: center; /* Ensure title is vertically centered */
+  margin: 0;  /* Remove any extra margin around the title */
+}
+
+/* Subtitle on Card */
+.card__subtitle {
+  font-family: var(--font-family);  
+  font-size: 1.2rem;
+  font-weight: var(--fw-normal);
+  text-align: center;
+}
+
+/* Back of the Card */
+.card__back {
+  background: var(--clr-dark); 
+  color: #f7d07d;
+  transform: rotateY(180deg);  
+  border-radius: 12px; /* Ensure the back matches the card's rounded corners */
+  padding: 2.5em; /* Add padding to the back */
+  box-sizing: border-box; /* Include padding in the overall size */
+}
+
+.card__body {
+  font-family: var(--font-family);  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}

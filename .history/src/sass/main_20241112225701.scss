@@ -7,8 +7,8 @@
   --level-three: translateZ(9rem);
   --fw-normal: 400;
   --fw-bold: 700;
-  --clr: #e08624; 
-  --clr-dark: #331710; 
+  --clr: #e08624; /* Squash Soup Orange */
+  --clr-dark: #331710; /* Dark brown for the card back */
   --font-family-roboto: 'Roboto', sans-serif;
   --font-family-playfair: 'Playfair Display', serif;
   --font-family-lora: 'Lora', serif;
@@ -60,7 +60,7 @@ body {
   text-align: left;
   font-family: var(--font-family-roboto);
   font-size: 1.2rem;
-  color: #022915; 
+  color: #022915; /* Dark green color */
   list-style-type: disc;
   margin-left: 20px;
 }
@@ -69,7 +69,7 @@ body {
 .card {
   width: 320px;
   height: 450px;
-  perspective: 1200px; /* 3D */
+  perspective: 1200px; /* 3D Perspective */
   border-radius: 12px;
   overflow: hidden;
   padding-bottom: 2em;
@@ -78,7 +78,7 @@ body {
   position: relative;
   margin-top: 20px;
   margin-bottom: 10px;
-  transition: transform 0.8s ease-out; 
+  transition: transform 0.8s ease-out; /* Smooth scaling */
 }
 
 /* Card Content */
@@ -91,7 +91,7 @@ body {
 }
 
 .card:hover .card__content {
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg); /* 3D Flip Effect */
 }
 
 /* Front and Back of the Card */
@@ -146,7 +146,7 @@ body {
 
 /* Title on Card Front */
 .card__title {
-  font-family: var(--font-family-roboto); 
+  font-family: var(--font-family-roboto); /* Changed back to Roboto */
   font-size: 2.4rem;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
@@ -196,7 +196,7 @@ body {
 
 /* Hover Effects */
 .card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05); /* Slightly scale up the card */
 }
 
 /* Shadow Effect on Hover */

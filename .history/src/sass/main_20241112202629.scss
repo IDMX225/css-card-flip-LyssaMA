@@ -1,0 +1,155 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --level-three: translateZ(9rem);
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --clr: #f59e42; /* Squash Soup Orange */
+  --clr-dark: #331710; /* Dark brown for the card back */
+  --font-family: 'Roboto', sans-serif;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);  
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Title Above the Card */
+.title-above-card {
+  font-family: var(--font-family);
+  font-size: 3rem; /* Larger size for the title */
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: 1.5em; /* Space between title and ingredients */
+  color: #331710; /* Dark color for the title */
+}
+
+/* Ingredients Section */
+.ingredients {
+  text-align: center;
+  margin-bottom: 2em; /* Space between ingredients and card */
+}
+
+
+.ingredients-heading {
+  font-family: var(--font-family);
+  font-size: 2.2rem; /* Larger size for "Ingredients you'll need:" */
+  font-weight: var(--fw-bold);
+  color: #331710; /* Dark color */
+  margin-bottom: 5px; /* Adds space between the heading and the ingredient list */
+}
+
+.ingredients-list {
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 1.2rem; /* Regular size for the list items */
+  color: #022915; /* Dark green color */
+  list-style-type: disc; /* Use bullet points for the list */
+  margin-left: 20px; /* Indentation for the list items */
+}
+
+/* Card Container */
+.card {
+  width: 300px;  
+  height: 400px;
+  perspective: 1000px;  
+  border-radius: 8px; 
+  overflow: hidden;  
+  padding-bottom: 2em; /* Add padding under the card */
+}
+
+/* Card Content */
+.card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s; 
+}
+
+.card:hover .card__content {
+  transform: rotateY(180deg);  
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden; 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 8px;  /* Ensures that the corners of both front and back are rounded */
+}
+
+/* Front of the Card */
+.card__front {
+  background-color: var(--clr);  
+  color: #034d28; /* Dark green text for contrast */
+  padding: 1em;  /* Add space around the content inside the front of the card */
+  border-radius: 8px; /* Match the card's rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow to front for depth */
+  position: relative;
+}
+
+/* Adding the border effect with rounded corners */
+.card__front::before {
+  content: '';
+  position: center;
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  border: 3px solid currentColor;
+  border-radius: 5px; /* Rounded corners on the border */
+}
+
+/* Title on Card Front */
+.card__title {
+  font-family: var(--font-family);  
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: #331710;
+  box-shadow: 0 0 5px black;
+  padding:.5em; /* Padding inside the box for space from the border */
+  text-align: center;
+  position: relative; /* Ensure the title is properly positioned */
+  z-index: 1;  /* Ensure the title is on top of the border */
+}
+
+/* Subtitle on Card */
+.card__subtitle {
+  font-family: var(--font-family);  
+  font-size: 1.2rem;
+  font-weight: var(--fw-normal);
+}
+
+/* Back of the Card */
+.card__back {
+  background: var(--clr-dark); 
+  color: #f7d07d;
+  transform: rotateY(180deg);  
+  border-radius: 8px; /* Ensure the back matches the card's rounded corners */
+  padding: 2em; /* Add some padding to the back */
+}
+
+.card__body {
+  font-family: var(--font-family);  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
