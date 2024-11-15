@@ -183,6 +183,22 @@ body {
   text-align: center;
   z-index: 1;
   overflow: hidden;
+  position: relative;
+}
+
+/* Image on the Back of the Card */
+.card__back .card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3; 
+  z-index: 0;
+  object-position: center; 
 }
 
 /* Body Text on Back */

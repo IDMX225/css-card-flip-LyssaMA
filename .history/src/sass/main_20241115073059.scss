@@ -123,8 +123,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
   text-align: center;
   z-index: 1;
   overflow: hidden;
@@ -155,11 +155,11 @@ body {
   text-transform: uppercase;
   color: #331710;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 1em;
-  margin: 0;
-  text-align: center;
+  padding: 1em; /* Adjust padding if necessary */
+  margin: 0; /* Remove any margin that could push the title off-center */
+  text-align: center; /* Ensure the text is centered */
   z-index: 2;
-  width: 100%;
+  width: 100%; /* Ensure the title takes up the full width */
   box-sizing: border-box;
 }
 
@@ -169,7 +169,7 @@ body {
   font-size: 1.5rem;
   font-weight: var(--fw-normal);
   text-align: center;
-  margin-top: 1.5em;
+  margin-top: 0;
 }
 
 /* Back of the Card */

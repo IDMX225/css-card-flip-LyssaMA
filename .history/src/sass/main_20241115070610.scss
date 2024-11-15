@@ -7,8 +7,8 @@
   --level-three: translateZ(9rem);
   --fw-normal: 400;
   --fw-bold: 700;
-  --clr: #e08624;
-  --clr-dark: #331710;
+  --clr: #e08624; 
+  --clr-dark: #331710; 
   --font-family-roboto: 'Roboto', sans-serif;
   --font-family-playfair: 'Playfair Display', serif;
   --font-family-lora: 'Lora', serif;
@@ -60,7 +60,7 @@ body {
   text-align: left;
   font-family: var(--font-family-roboto);
   font-size: 1.2rem;
-  color: #032c17;
+  color: #032c17; 
   list-style-type: disc;
   margin-left: 20px;
 }
@@ -69,8 +69,7 @@ body {
 .card {
   width: 320px;
   height: 450px;
-  perspective: 1200px;
-  /* 3D */
+  perspective: 1200px; /* 3D */
   border-radius: 12px;
   overflow: hidden;
   padding-bottom: 2em;
@@ -79,7 +78,7 @@ body {
   position: relative;
   margin-top: 20px;
   margin-bottom: 10px;
-  transition: transform 0.8s ease-out;
+  transition: transform 0.8s ease-out; 
 }
 
 /* Card Content */
@@ -92,7 +91,7 @@ body {
 }
 
 .card:hover .card__content {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); 
 }
 
 /* Front and Back of the Card */
@@ -128,8 +127,6 @@ body {
   text-align: center;
   z-index: 1;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
 }
 
 /* Image on the Front of the Card */
@@ -149,18 +146,19 @@ body {
 
 /* Title on Card Front */
 .card__title {
-  font-family: var(--font-family-playfair);
+  font-family: var(--font-family-playfair); 
   font-size: 2.2rem;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   color: #331710;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 1em;
-  margin: 0;
   text-align: center;
+  position: relative;
   z-index: 2;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 0.5em;
 }
 
 /* Subtitle on Card */
@@ -169,7 +167,7 @@ body {
   font-size: 1.5rem;
   font-weight: var(--fw-normal);
   text-align: center;
-  margin-top: 1.5em;
+  margin-top: 0;
 }
 
 /* Back of the Card */
@@ -198,11 +196,11 @@ body {
 
 /* Hover Effects */
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); 
 }
 
 /* Shadow Effect on Hover */
-.card:hover .card__front,
+.card:hover .card__front, 
 .card:hover .card__back {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.5);
 }
